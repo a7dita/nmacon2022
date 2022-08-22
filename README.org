@@ -10,6 +10,7 @@ for the upcoming /NMACON 2022/.
 
 Making sense of the motor behaviour of mice in a non-motor task
 
+** Group details
 *** Group members
 
  - Zakieh Hasanzadeh
@@ -57,6 +58,19 @@ file:nmacn2022_slides.pdf
 
 
 * Extended version (WIP)
+
+** Group details
+*** Group members
+
+ - Zakieh Hasanzadeh
+ - Erfan Najafzadeh
+ - Luis Torrao
+ - Neha Yadav
+ - Anindita Basu
+
+*** Mentors
+
+- Luciano Censoni
 
 ** TODO Abstract
 DEADLINE: <2022-09-05 Mon>
