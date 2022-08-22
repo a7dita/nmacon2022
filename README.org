@@ -1,0 +1,93 @@
+#+title: NMACON 2022 - Braaibroodjes Reunited
+
+Extended version of the /NMACN 2022/ project
+from Pod *Braaibroodjes* Group *Mighty Mice*
+for the upcoming /NMACON 2022/.
+
+* Original project
+
+*What are they running from?*
+
+Making sense of the motor behaviour of mice in a non-motor task
+
+*** Group members
+
+ - Zakieh Hasanzadeh
+ - Erfan Najafzadeh
+ - Luis Torrao
+ - Neha Yadav
+
+*** Group/Pod TA
+
+Anindita Basu
+
+*** Project TA
+
+Ritu Panda
+
+*** Mentors
+
+- Luciano Censoni
+
+- Suranjana Pal
+
+** Abstract
+
+The Stringer experiment [1, 2] records both the spontaneous neuronal activity of mice visual cortex and the population-level neuronal response during the orientation decoding task, and brings about several interesting observations. Whereas it successfully establishes differential tuning activities of V1 neurons, it does not provide an explanation of the observed spontaneous motor activity in the mice during the decoding task. We aim to investigate if the motor activity is related to the visual task in any possible way. Specifically, if the orientational preference of the neurons is correlated to the velocity of running and if the positional distribution of the neurons can be informative in this regard. Several studies report an enhancing role of locomotion in visual processing [3, 4], whereas V1 neurons show spatial location-related information encoding in another study [5]. However, another paper claims that locomotion in mice might result from the spontaneous activities of the motor cortex [6].
+
+From our preliminary data analysis, we discover a subset of the neurons that showed bimodal tuning towards orientation grating, and a smaller subset of silent neurons, in addition to the well-known unimodally tuned neurons. Also, we are unable to establish any direct correlation between the orientation stimuli and the running speed (Pearson co-eff = - 0.035). We plan to design a suitable ML decoding algorithm to check if that can predict the running speed from any higher-order information encoded in the neuronal representation of the visual cortex. Logistic regression categorises movement from non-movement with 86.9% accuracy.  Following that, we build a GLM model to efficiently predict the velocity from neuronal activity. The results indicate that visual representation encodes sufficient information to predict the running speed. We plan to explore the role of individual neuronal positions and tunings (or absence of tunings) in determining the running speed. We also plan to explore other non-linear methods for better prediction.
+
+References
+
+[1] Stringer, C., Pachitariu, M., Steinmetz, N., Reddy, C. B., Carandini, M., and Harris, K. D. (2019). Spontaneous behaviours drive multidimensional, brainwide activity. Science, 364(6437): eaav7893. https://doi.org/10.1126/science.aav7893
+
+[2] Stringer, C., Michaelos, M., Tsyboulski, D., Lindo, S. E., and Pachitariu, M. (2021). High-precision coding in visual cortex. Cell, 184(10): 2767-2778. https://doi.org/10.1016/j.cell.2021.03.042
+
+[3] Dadarlat MariaC, Stryker,Michael P. Locomotion Enhances Neural Encoding of Visual Stimuli in MouseV1 (2017) J Neurosci. 37 (14) doi: https://doi.org/10.1523%2FJNEUROSCI.2728-16.2017
+
+[4] Muzzu Tomaso, Aman B. Saleem, Feature selectivity can explain mismatch signals in mouse visual cortex (2021), Cell Reports,37(1), https://doi.org/10.1016/j.celrep.2021.109772
+
+[5] Fiser A, Mahringer D, Oyibo HK, Petersen AV, Leinweber M, Keller GB. Experience-dependent spatial expectations in mouse visual cortex. Nat Neurosci. 2016 Dec;19(12):1658-1664. https://doi.org/10.1038/nn.4385.
+
+ [6] Effects of Locomotion on Visual Responses in the Mouse Superior Colliculus.Savier EL, Chen H, Cang J. . J Neurosci. 2019 Nov 20;39(47):9360-9368.
+
+** Presentation slides
+
+file:nmacn2022_slides.pdf
+
+
+* Extended version (WIP)
+
+** TODO Abstract
+DEADLINE: <2022-09-05 Mon>
+** TODO Presentation slides
+
+* Possible Extentions
+
+** DONE Find out the details of the mice PVC neocoortical layers
+** IN-PROGRESS Find out how the accuracy of our log-reg model varies with different cut-offs for rest/running
+** TODO Try different dimensionality reduction techniques
+** TODO Find out the clusters responsible for different neocortical layers
+** TODO Build a network model for mice PVC
+
+*** IN-PROGRESS [[id:9719bf17-c060-4796-beed-dc426911b0db][blumenfeld2006 - Neural network model of the primary visual cortex: From functional architecture to lateral connectivity and back]]
+
+activity patterns similar to orientation maps (OMs), emerge in the primary visual cortex (V1) even in the absence of sensory input, suggesting an intrinsic mechanism of OM activation.
+
+we suggest a neural network model in which OMs are encoded by the intrinsic lateral connections
+
+The proposed connectivity pattern depends on the preferred orientation and, unlike previous models, on the degree of orientation selectivity of the interconnected neurons.
+
+We prove that the network has a ring attractor composed of an approximated version of the OMs. Consequently, OMs emerge spontaneously when the network is presented with an unstructured noisy input.
+
+*** TODO Try this V1 network model using PyNN
+
+https://github.com/OpenSourceBrain/V1NetworkModels
+
+* Work Log
+** DONE Discuss Ideas
+SCHEDULED: <2022-08-15 Mon>
+** IN-PROGRESS Implementation
+** DONE Apply for the conference
+SCHEDULED: <2022-08-22 Mon>
+** IN-PROGRESS Mentor meets
