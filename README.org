@@ -56,7 +56,6 @@ References
 
 file:nmacn2022_slides.pdf
 
-
 * Extended version (WIP)
 
 ** Group details
@@ -78,8 +77,14 @@ DEADLINE: <2022-09-05 Mon>
 
 * Possible Extentions
 
-** DONE Find out the details of the mice PVC neocoortical layers
-** IN-PROGRESS Find out how the accuracy of our log-reg model varies with different cut-offs for rest/running
+** DONE Find out the details of the mice PVC neocoortical layers.
+** DONE Find out how the accuracy of our log-reg model varies with different cut-offs for rest/running
+
+We do a for-loop over 0-20 range of running speed and find the accuracies of LR classification for each of them.
+We plot the accuracies, and find a sharp rise of accuracy with a cut-off of 2, and no further increase of performance beyond that.
+Therefore, we choose this particular cut-off for our further analysis.
+** IN-PROGRESS Do cross-validation for our GLM
+
 ** TODO Try different dimensionality reduction techniques
 ** TODO Find out the clusters responsible for different neocortical layers
 ** TODO Build a network model for mice PVC
@@ -105,3 +110,49 @@ SCHEDULED: <2022-08-15 Mon>
 ** DONE Apply for the conference
 SCHEDULED: <2022-08-22 Mon>
 ** IN-PROGRESS Mentor meets
+** Week 01 Meeting 01
+SCHEDULED: <2022-08-15 Mon>
+
+We meet for the first time and discuss m\how much time we are willing to invest and what will be a convenient way to progress.
+
+*** tasks
+
+1. Zak searches for a more detailed description about neocortical layers of mice PVC
+2. Erfan finds out a way to implement an arbitrary value criterion to binarize the y-data (mouse running speed) for our logistic regression model.
+3. Luis and I (Anindita), in the mean time, think about possible extensions of the modelling.
+
+** Week 02 Meeting 01
+SCHEDULED: <2022-08-21 Sun>
+
+Zak presents her literature review on PVC cellular organization.
+
+*** Tasks
+
+1. Zak and I (Anindita) start to wrok on the PFC simulation.
+2. Luis tries clustering.
+3. Erfan continues to work on trying different cutoffs for LR model.
+
+** Week 02 Meeting 02
+SCHEDULED: <2022-08-24 Wed>
+
+We decide to first work on a few pending areas from the last time.
+
+*** tasks
+
+1. Zak tries to find more evidence, and solve the paradox of PVC thickness.
+2. Erfan implements a for-loop.
+3. Neha does cross-validation.
+4. Luis checks the regularization of our GLM.
+
+** Week 03 Meeting 01
+SCHEDULED: <2022-08-31 Wed>
+
+*** Possible tasks for us
+
+1. Zak finds a way to (at least visually) compare between z-location distribution of all the neurons and that of important ones
+2. Neha and I (Anindita) try to implement the cross-validation from the first principle (in the way Luciano suggested)
+3. Luis and I (Anindita) try to implement the GLM with L1 normalization.
+4. Erfan tries to summerize what extra steps we did till now since our Neuromatch presentation.
+
+** TODO Week 03 Meeting 02
+SCHEDULED: <2022-09-02 Fri>
