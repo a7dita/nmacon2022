@@ -8,7 +8,7 @@ for the upcoming /NMACON 2022/.
 
 *What are they running from?*
 
-Making sense of the motor behaviour of mice in a non-motor task
+*Making sense of the motor behaviour of mice in a non-motor task*
 
 ** Group details
 *** Group members
@@ -33,6 +33,10 @@ Ritu Panda
 - Suranjana Pal
 
 ** Abstract
+
+*What are they running from?*
+
+*Making sense of the motor behaviour of mice in a non-motor task*
 
 The Stringer experiment [1, 2] records both the spontaneous neuronal activity of mice visual cortex and the population-level neuronal response during the orientation decoding task, and brings about several interesting observations. Whereas it successfully establishes differential tuning activities of V1 neurons, it does not provide an explanation of the observed spontaneous motor activity in the mice during the decoding task. We aim to investigate if the motor activity is related to the visual task in any possible way. Specifically, if the orientational preference of the neurons is correlated to the velocity of running and if the positional distribution of the neurons can be informative in this regard. Several studies report an enhancing role of locomotion in visual processing [3, 4], whereas V1 neurons show spatial location-related information encoding in another study [5]. However, another paper claims that locomotion in mice might result from the spontaneous activities of the motor cortex [6].
 
@@ -71,8 +75,21 @@ file:nmacn2022_slides.pdf
 
 - Luciano Censoni
 
-** TODO Abstract
+** DONE Abstract
 DEADLINE: <2022-09-05 Mon>
+
+*Locomotion speed is encoded in superficial layers of mouse V1 with a non-uniform distribution biased towards layer 4*
+
+Stringer et al. used two-photon calcium imaging to record activity from tens of thousands of V1 cells in head-fixed mice during a visual orientation discrimination task, and showed that the neural response encodes stimulus discrimination thresholds nearly 100 times more precise than the corresponding behavioral thresholds. Animal arousal state was monitored by measuring the locomotion speed during task execution, but could not explain this large discrepancy in discrimination threshold.
+
+Here, we take advantage of the fact that the behavioral data was acquired in that experiment, and ask whether we are able to show that the locomotion speed is encoded in V1 neural activity. We perform a logistic regression on the neural responses, and show that it is able to distinguish “passive” states from “running” states with very high accuracy; a linear regression on the same dataset is able to extract the precise locomotion speed with similar accuracy. Importantly, we show that the subset of cells with larger model coefficients is not uniformly distributed in the recorded V1 cortical volume, exhibiting instead a clear bias towards layer 4 and away from layer 2/3.
+
+While these observations appear to agree with previous investigations, which are consistently able to detect effects on cell membrane potentials or activity patterns in layer 4 in V1 due to locomotion, we believe our approach adds an important dimension by attempting to characterize the laminar distribution of the locomotion speed information density in V1.
+
+*** Authorship
+
+Zakie Hasanzade, Allame Tabatabaei University, Iran; Neha Yadav, Indian institute of science and Research, Berhampur, India; Luis Torrao, University of Hull, UK; Erfan Najafzadeh, Shahid Beheshti University, Iran; Anindita Basu, Scuola Internazionale Superiore di Studi Avanzati; Luciano Censoni, Umeå University, Umeå, Sweden;
+
 ** TODO Presentation slides
 
 * Possible Extentions
@@ -83,8 +100,7 @@ DEADLINE: <2022-09-05 Mon>
 We do a for-loop over 0-20 range of running speed and find the accuracies of LR classification for each of them.
 We plot the accuracies, and find a sharp rise of accuracy with a cut-off of 2, and no further increase of performance beyond that.
 Therefore, we choose this particular cut-off for our further analysis.
-** IN-PROGRESS Do cross-validation for our GLM
-
+** DONE Do cross-validation for our GLM
 ** TODO Try different dimensionality reduction techniques
 ** TODO Find out the clusters responsible for different neocortical layers
 ** TODO Build a network model for mice PVC
@@ -154,5 +170,7 @@ SCHEDULED: <2022-08-31 Wed>
 3. Luis and I (Anindita) try to implement the GLM with L1 normalization.
 4. Erfan tries to summerize what extra steps we did till now since our Neuromatch presentation.
 
-** TODO Week 03 Meeting 02
+** Week 03 Meeting 02
 SCHEDULED: <2022-09-02 Fri>
+
+We started writing the abstract.
