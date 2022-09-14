@@ -90,7 +90,7 @@ While these observations appear to agree with previous investigations, which are
 
 Zakie Hasanzade, Allame Tabatabaei University, Iran; Neha Yadav, Indian institute of science and Research, Berhampur, India; Luis Torrao, University of Hull, UK; Erfan Najafzadeh, Shahid Beheshti University, Iran; Anindita Basu, Scuola Internazionale Superiore di Studi Avanzati; Luciano Censoni, Umeå University, Umeå, Sweden;
 
-** TODO Presentation slides
+** IN-PROGRESS Presentation slides
 
 * Possible Extentions
 
@@ -102,10 +102,10 @@ We plot the accuracies, and find a sharp rise of accuracy with a cut-off of 2, a
 Therefore, we choose this particular cut-off for our further analysis.
 ** DONE Do cross-validation for our GLM
 ** TODO Try different dimensionality reduction techniques
-** TODO Find out the clusters responsible for different neocortical layers
-** TODO Build a network model for mice PVC
+** TODO Find out the clustering alogorithm to segment different neocortical layers
+** CANCELLED Build a network model for mice PVC
 
-*** IN-PROGRESS [[id:9719bf17-c060-4796-beed-dc426911b0db][blumenfeld2006 - Neural network model of the primary visual cortex: From functional architecture to lateral connectivity and back]]
+*** [[id:9719bf17-c060-4796-beed-dc426911b0db][blumenfeld2006 - Neural network model of the primary visual cortex: From functional architecture to lateral connectivity and back]]
 
 activity patterns similar to orientation maps (OMs), emerge in the primary visual cortex (V1) even in the absence of sensory input, suggesting an intrinsic mechanism of OM activation.
 
@@ -115,9 +115,11 @@ The proposed connectivity pattern depends on the preferred orientation and, unli
 
 We prove that the network has a ring attractor composed of an approximated version of the OMs. Consequently, OMs emerge spontaneously when the network is presented with an unstructured noisy input.
 
-*** TODO Try this V1 network model using PyNN
+*** Try this V1 network model using PyNN
 
 https://github.com/OpenSourceBrain/V1NetworkModels
+**
+** TODO If using the acceleration will make our models better predictor.
 
 * Work Log
 ** DONE Discuss Ideas
@@ -174,3 +176,36 @@ SCHEDULED: <2022-08-31 Wed>
 SCHEDULED: <2022-09-02 Fri>
 
 We started writing the abstract.
+** DONE Abstract submission
+SCHEDULED: <2022-09-05 Mon>
+
+** Pending tasks
+
+*** TODO cross-validation across time
+
+**** TODO find out a suitable segment length (to preserve the temporal correlation)
+
+***** TODO find out the trial time (individual stimulli presentation duration)
+
+***** TODO find out the image sampling rate
+
+The original sampling was 3 Hz
+
+- but do we know if they have provided the activity every snap?
+- Are they raw calcium channel activity at all?
+
+****** TODO find out if any temporal deconvolution is already done to recover the spiking activity from calcium channel activity
+
+**** TODO Try Monte-carlo / repeated-subset CV
+
+[Here lies the confusion]
+
+**** TODO Do it for both the models
+
+*** TODO do statistical tests to find out if the layer 4 is significantly more active.
+
+**** TODO check if we are doing the normalization (calculating significant neuron fraction) properly
+
+**** TODO which two distributions to compare for the statistical test?
+
+**** TODO do the same for different regularization techniques
